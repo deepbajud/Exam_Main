@@ -28,9 +28,13 @@ class MainActivity : AppCompatActivity() {
 
         productListView.setOnItemClickListener { _, _, position, _ ->
             val selectedProduct = products[position]
-            val intent = Intent(this, Pr::class.java)
+            val intent = Intent(this, ProductDetailsActivity::class.java)
             intent.putExtra("product", selectedProduct)
             startActivity(intent)
         }
     }
+}
+
+private fun Intent.putExtra(s: String, selectedProduct: Product) {
+    TODO("Not yet implemented")
 }
